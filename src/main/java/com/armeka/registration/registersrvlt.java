@@ -137,7 +137,7 @@ public class registersrvlt extends HttpServlet {
 			props.put("mail.smtp.port", "465");
 			Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("armekainfotec@gmail.com", "9096365035");
+					return new PasswordAuthentication("email", "password");
 				}
 			});
 			try {
