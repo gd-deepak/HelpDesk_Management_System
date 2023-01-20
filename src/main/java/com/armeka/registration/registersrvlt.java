@@ -183,52 +183,7 @@ public class registersrvlt extends HttpServlet {
 	
 	}
 	
-	/* NOT WORKING SEND MAIL
-	private void sendmail(User user) {
-		final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
-		// Get a Properties object
-		Properties props = System.getProperties();
-		props.setProperty("mail.smtp.host", "smtp.gmail.com");
-		props.setProperty("mail.smtp.socketFactory.class", SSL_FACTORY);
-		props.setProperty("mail.smtp.socketFactory.fallback", "false");
-		props.setProperty("mail.smtp.port", "465");
-		props.setProperty("mail.smtp.socketFactory.port", "465");
-		props.put("mail.smtp.auth", "true");
-		props.put("mail.debug", "true");
-		props.put("mail.store.protocol", "pop3");
-		props.put("mail.transport.protocol", "smtp");
-		final String username = "maharashtrapoliceonline@gmail.com";//
-		final String password = "9096365035";
-		String msg = ("Hello " + user.getUname()
-				+ "\n \n Your Complaint is Registered Successfully by email." + user.getUemail());
-		try {
-			Session session = Session.getDefaultInstance(props, new Authenticator() {
-				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication(username, password);
-				}
-			});
-
-			try {
-				MimeMessage message = new MimeMessage(session);
-				message.setFrom(new InternetAddress("maharashtrapoliceonline@gmail.com"));
-				message.addRecipient(Message.RecipientType.TO, new InternetAddress(user.getUemail()));
-				message.setSubject("Maharashtra Police User Complaint Registration");
-				message.setText(msg);
-				System.out.println("Sending MSG to Deepak");
-//				logger.debug("Sending mail to userid () : ", user.getUemail());
-//			 Send message
-				Transport.send(message);
-
-			} catch (MessagingException mex) {
-				mex.printStackTrace();
-			}
-
-		} catch (Exception mex) {
-			mex.printStackTrace();
-		}
-	} 
-	*/
-
+	
 }
 
 
